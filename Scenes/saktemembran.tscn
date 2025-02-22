@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://can0qv71kue1y"]
+
+[ext_resource type="Script" path="res://Scripts/area_2d.gd" id="1_3tknf"]
+[ext_resource type="Texture2D" uid="uid://k1jkakfxsnd0" path="res://Assets/Cannon/All_Fire_Bullet_Pixel_16x16_00.png" id="2_d8sgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5u38o"]
+size = Vector2(401, 338)
+
+[node name="Saktemembran" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_3tknf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_5u38o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.63427, 0.857294)
+texture = ExtResource("2_d8sgy")
