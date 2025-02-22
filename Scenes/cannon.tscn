@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkfdug8joioyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivv0a"]
+size = Vector2(16, 14)
+
+[node name="Cannon" type="CharacterBody2D"]
+position = Vector2(39, 23)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ivv0a")
