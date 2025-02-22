@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6krtmghhpde4"]
+
+[ext_resource type="Texture2D" uid="uid://d0c04uicxnfa6" path="res://Assets/TilesetReliefDetail.png" id="1_t101c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihrwq"]
+atlas = ExtResource("1_t101c")
+region = Rect2(36, 48, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3o06"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihrwq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjgpq"]
+size = Vector2(415.5, 295)
+
+[node name="testobjekt" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(291, 199)
+scale = Vector2(35.5, 23.1667)
+sprite_frames = SubResource("SpriteFrames_o3o06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(288.25, 187.5)
+shape = SubResource("RectangleShape2D_mjgpq")

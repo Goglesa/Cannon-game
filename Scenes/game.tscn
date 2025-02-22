@@ -1,12 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://capw4d01rdue8"]
+[gd_scene load_steps=3 format=3 uid="uid://capw4d01rdue8"]
 
 [ext_resource type="PackedScene" uid="uid://dkfdug8joioyc" path="res://Scenes/cannon.tscn" id="1_xai8d"]
+[ext_resource type="PackedScene" uid="uid://b6krtmghhpde4" path="res://Scenes/testobjekt.tscn" id="2_xfrhy"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Cannon" parent="." instance=ExtResource("1_xai8d")]
-position = Vector2(125, 552)
+position = Vector2(191, 520)
 scale = Vector2(3.92, 3.92)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
+
+[node name="testobjekt" parent="." instance=ExtResource("2_xfrhy")]
+position = Vector2(-881, 215)
