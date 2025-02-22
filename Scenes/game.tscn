@@ -1,23 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://capw4d01rdue8"]
+[gd_scene load_steps=5 format=3 uid="uid://capw4d01rdue8"]
 
 [ext_resource type="PackedScene" uid="uid://dkfdug8joioyc" path="res://Scenes/cannon.tscn" id="1_xai8d"]
 [ext_resource type="PackedScene" uid="uid://b6krtmghhpde4" path="res://Scenes/testobjekt.tscn" id="2_xfrhy"]
-[ext_resource type="PackedScene" uid="uid://dke6g40mnn8m0" path="res://Scenes/spring.tscn" id="3_1lup2"]
+[ext_resource type="PackedScene" uid="uid://can0qv71kue1y" path="res://Scenes/saktemembran.tscn" id="3_8srwt"]
+[ext_resource type="PackedScene" path="res://Scenes/spring.tscn" id="4_hs5ax"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Cannon" parent="." instance=ExtResource("1_xai8d")]
-position = Vector2(187, 262)
-scale = Vector2(3.92, 3.92)
+position = Vector2(167, 221)
+scale = Vector2(1.09042, 1.09042)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
-scale = Vector2(3.48, 1.0875)
 
 [node name="testobjekt" parent="." instance=ExtResource("2_xfrhy")]
-position = Vector2(369, 562)
-scale = Vector2(0.16, 0.16)
+position = Vector2(-881, 215)
 
-[node name="Spring" parent="." instance=ExtResource("3_1lup2")]
-position = Vector2(572, 597)
-scale = Vector2(1.72, 1.72)
+[node name="Saktemembran" parent="." instance=ExtResource("3_8srwt")]
+position = Vector2(713, 289)
+
+[node name="Spring" parent="." instance=ExtResource("4_hs5ax")]
+position = Vector2(568, 594)
