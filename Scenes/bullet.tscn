@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://drotoswqvtbkd"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_2a8c4"]
+[ext_resource type="Texture2D" uid="uid://k1jkakfxsnd0" path="res://Assets/Cannon/All_Fire_Bullet_Pixel_16x16_00.png" id="1_gv3mq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kmt8"]
+size = Vector2(21, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b55pa"]
+atlas = ExtResource("1_gv3mq")
+region = Rect2(450, 204, 25, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u85o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b55pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bullet" type="Area2D"]
+position = Vector2(37, 21)
+scale = Vector2(4.08, 4.08)
+script = ExtResource("1_2a8c4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -1.5)
+shape = SubResource("RectangleShape2D_7kmt8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4u85o")

@@ -1,14 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkfdug8joioyc"]
+[gd_scene load_steps=4 format=3 uid="uid://dkfdug8joioyc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivv0a"]
-size = Vector2(16, 14)
+[ext_resource type="Script" path="res://Scripts/cannon.gd" id="1_5tqyq"]
+[ext_resource type="Texture2D" uid="uid://ctao8ucbk7mns" path="res://Assets/Cannon/02.png" id="1_odxyb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ui28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_odxyb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Cannon" type="CharacterBody2D"]
 position = Vector2(39, 23)
+script = ExtResource("1_5tqyq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-autoplay = "default"
+sprite_frames = SubResource("SpriteFrames_7ui28")
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_ivv0a")
+[node name="Shooting point" type="Marker2D" parent="AnimatedSprite2D"]
+unique_name_in_owner = true
+position = Vector2(28, -1)
