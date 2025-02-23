@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 1700
+const SPEED = 700
 const GRAVITY = 1500
 const RANGE = 1200
 var travelled_distance = 0
