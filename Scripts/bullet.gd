@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 700
 const GRAVITY = 1500
-const RANGE = 1200
+const RANGE = 5000
 var travelled_distance = 0
 
 func _ready():
@@ -29,3 +29,7 @@ func _physics_process(delta):
 		travelled_distance += velocity.length() * delta
 		if travelled_distance > RANGE:
 			queue_free()
+
+
+func _on_timer_timeout() -> void:
+	queue_free()

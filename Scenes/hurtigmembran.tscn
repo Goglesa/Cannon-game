@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://mcbg0mhpgrb8"]
 
 [ext_resource type="Script" path="res://Scripts/speedup.gd" id="1_ml1cq"]
-[ext_resource type="Texture2D" uid="uid://darpanydfvkpe" path="res://Assets/windowpanenoshine.png" id="1_ygla8"]
+[ext_resource type="Texture2D" uid="uid://c1j5vrkpv55fd" path="res://Assets/Sprite-001.png" id="2_42on2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyc86"]
 size = Vector2(73, 91)
@@ -16,5 +16,5 @@ position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_xyc86")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0723754, 0.0892602)
-texture = ExtResource("1_ygla8")
+scale = Vector2(2.31237, 2.85184)
+texture = ExtResource("2_42on2")
