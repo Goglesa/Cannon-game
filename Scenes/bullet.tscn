@@ -22,7 +22,7 @@ animations = [{
 }]
 
 [node name="Bullet" type="CharacterBody2D"]
-scale = Vector2(3.32, 3.32)
+scale = Vector2(1.10896, 1.10896)
 script = ExtResource("1_2a8c4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -31,3 +31,8 @@ shape = SubResource("RectangleShape2D_umq1l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jipmm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 26.37
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
