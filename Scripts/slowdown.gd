@@ -7,5 +7,5 @@ func _ready() -> void:
 func _on_body_entered(body: PhysicsBody2D) -> void:
 	# Sjekk om objeket er en CharacterBody2D (for eksempel Bullet)
 	if body is CharacterBody2D:
-		# Reduser farten med 40% -> velocity *= 0.6
-		body.velocity *= 0.6
+		# Øker farten med 60% -> velocity *= 1.6
+		body.velocity *= 0.2
